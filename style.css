@@ -1,0 +1,229 @@
+* {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    background: #D5D5D5;
+}
+
+
+.avatar-item {
+    background: rgba(237, 237, 237);
+    min-width: 110px;
+    width: 20vw;
+    max-width: 150px;
+    height: fit-content;
+    border-radius: 10%;
+    transition: 200ms;
+    box-sizing: border-box;
+}
+
+.avatar-item:hover {
+    background: rgba(222, 222, 222);
+}
+
+.avatar-item.selected {
+    background: rgba(222, 222, 222);
+    border: solid #929292 1px;
+}
+
+.avatar-item div {
+    padding: 5%;
+}
+
+.avatar-item img {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.avatar-item p {
+    width: fit-content;
+    margin: 0.25em auto 0 auto;
+    font-size: 1em;
+}
+
+.avatar-items-grid {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    height: 100vh;
+    padding-top: 2%;
+    box-sizing: border-box;
+    box-shadow: 6px 0px 35px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 0px 35px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 0px 35px 1px rgba(0,0,0,0.75);
+    border-radius: 0 5% 5% 0;
+    overflow: hidden;
+    background: #FFFFFF;
+}
+
+.avatar-items-grid > div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 10px;
+    justify-content: space-evenly;
+    align-content: baseline;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.avatar-items-grid > p {
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.75em;
+    flex: 100%;
+    height: 15%;
+    max-height: 50px;
+}
+
+.menu-bar {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 3%;
+    min-width: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #D5D5D5;
+    color: #929292;
+    font-size: 2em;
+    height: 100vh;
+}
+
+.menu-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    box-sizing: border-box;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    border-radius: 25px 0 0 25px;
+    background: rgba(255, 255, 255, 0.32);
+}
+
+.menu-item.selected {
+    background: white;
+    border-radius: 25px 0 0 25px;
+}
+
+.avatar-items-menu {
+    display: flex;
+}
+
+.custom-avatar {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-avatar img {
+    width: 50%;
+}
+
+.custom-avatar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.5em;
+    margin-bottom: 15px;
+}
+
+.button {
+    padding: 5px 25px 0 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 2em;
+    transition: 0.2s;
+    color: #929292;
+    background: white;
+}
+
+.button:hover {
+    background: #e3e3e3;
+}
+
+.button.delete:hover {
+    background: red;
+    color: white;
+}
+
+.button.delete {
+    right: 20%;
+}
+
+.action-buttons {
+    position: absolute;
+    display: flex;
+    column-gap: 5px;
+    row-gap: 5px;
+    top: 2%;
+    right: 2%;
+}
+
+
+@media (orientation: portrait) {
+    .avatar-items-grid {
+        height: 42vh;
+        width: 100%;
+        padding-top: 2%;
+        box-sizing: border-box;
+        box-shadow: 6px 0px 35px 1px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 6px 0px 35px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 0px 35px 1px rgba(0,0,0,0.75);
+        border-radius: 5% 5% 0 0;
+        overflow: hidden;
+        background: #FFFFFF;
+    }
+
+    .avatar-item p {
+        font-size: 95%;
+    }
+
+
+    .custom-avatar {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .avatar-items-menu {
+        flex-direction: column-reverse;
+    }
+
+    .menu-bar {
+        flex-direction: row;
+        width: 100%;
+        height: 7vh;
+    }
+
+    .menu-item:hover {
+        border-radius: 0 0 25px 25px;
+        background: rgba(255, 255, 255, 0.32);
+    }
+
+    .menu-item.selected {
+        background: white;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}
