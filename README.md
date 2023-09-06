@@ -1,1 +1,1 @@
-.
+# React Avatar Menu
